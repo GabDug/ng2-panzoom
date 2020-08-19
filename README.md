@@ -239,7 +239,7 @@ export class MyComponent implements OnInit, OnDestroy {
   private apiSubscription: Subscription;
 
   ngOnInit(): void {
-    this.apiSubscription = this.panzoomConfig.api.subscribe( (api: PanZoomAPI) => this.panZoomAPI = api );
+    this.apiSubscription = this.panZoomConfig.api.subscribe( (api: PanZoomAPI) => this.panZoomAPI = api );
   }
 
   ngOnDestroy(): void {
@@ -274,7 +274,7 @@ export class MyComponent implements OnInit, OnDestroy {
   private modelChangedSubscription: Subscription;
 
   ngOnInit(): void {
-    this.modelChangedSubscription = this.panzoomConfig.modelChanged.subscribe( (model: PanZoomModel) => this.onModelChanged(model) );
+    this.modelChangedSubscription = this.panZoomConfig.modelChanged.subscribe( (model: PanZoomModel) => this.onModelChanged(model) );
   }
 
   ngOnDestroy(): void {
